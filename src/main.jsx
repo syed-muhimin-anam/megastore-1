@@ -5,14 +5,15 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
-import App from './App.jsx'
+import Root from './Components/Root/Root.jsx';
+
 
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div className='text-5xl text-red-400'>Hello world!</div>,
+    element: <Root></Root>
   },
 ]);
 
