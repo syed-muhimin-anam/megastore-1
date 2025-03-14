@@ -1,6 +1,7 @@
 import { CiHeart, CiSearch, CiUser } from "react-icons/ci";
 import brandImg from "/brandImg.webp";
 import { FaUserCircle } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
@@ -120,7 +121,7 @@ const Navbar = () => {
               className="flex gap-4 text-white  mt-2  "
             >
               <li>
-                <a>About Us</a>
+                <NavLink to={'about-us'}>About us</NavLink>
               </li>
               <li>
                 <a>Gift Cards</a>
