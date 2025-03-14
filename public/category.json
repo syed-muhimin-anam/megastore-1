@@ -1,0 +1,27 @@
+[
+    {
+      "category": "Smart",
+      "image": "https://example.com/smart-device.jpg"
+    },
+    {
+      "category": "Mix Grinder",
+      "image": "https://example.com/mix-grinder.jpg"
+    },
+    {
+      "category": "Cooking Pan",
+      "image": "https://example.com/cooking-pan.jpg"
+    },
+    {
+      "category": "Room Heater",
+      "image": "https://example.com/room-heater.jpg"
+    },
+    {
+      "category": "Refrigerator",
+      "image": "https://example.com/refrigerator.jpg"
+    },
+    {
+      "category": "Microwave Oven",
+      "image": "https://example.com/microwave-oven.jpg"
+    }
+  ]
+  
