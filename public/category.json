@@ -1,27 +1,27 @@
 [
     {
-      "category": "Smart",
-      "image": "https://example.com/smart-device.jpg"
+      "category": "Smart tv",
+      "image": "https://i.ibb.co.com/VpJk60VX/smart-tv.webp"
     },
     {
       "category": "Mix Grinder",
-      "image": "https://example.com/mix-grinder.jpg"
+      "image": "https://i.ibb.co.com/BKy0F7dQ/grainder.webp"
     },
     {
       "category": "Cooking Pan",
-      "image": "https://example.com/cooking-pan.jpg"
+      "image": "https://i.ibb.co.com/wF3dYkVS/pans.webp"
     },
     {
       "category": "Room Heater",
-      "image": "https://example.com/room-heater.jpg"
+      "image": "https://i.ibb.co.com/4w3ngS4d/washing-machine.webp"
     },
     {
       "category": "Refrigerator",
-      "image": "https://example.com/refrigerator.jpg"
+      "image": "https://i.ibb.co.com/XfZDrsjn/mobile.webp"
     },
     {
       "category": "Microwave Oven",
-      "image": "https://example.com/microwave-oven.jpg"
+      "image": "https://i.ibb.co.com/pBj3ZsRC/oven.webp"
     }
   ]
   

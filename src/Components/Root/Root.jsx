@@ -2,6 +2,7 @@ import React from 'react'
 
 import Sweiper from './sweiper'
 import FeaturedCategory from '../Category/FeaturedCategory'
+import Deal from '../Deal'
 
 const Root = () => {
   return (
@@ -9,6 +10,7 @@ const Root = () => {
         {/* <Navbar></Navbar> */}
         <Sweiper></Sweiper>
         <FeaturedCategory></FeaturedCategory>
+        <Deal></Deal>
     </div>
   )
 }
