@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, NavLink, Outlet } from 'react-router-dom';
 import tab from '../assets/featured-categories/tab.jpg';
-import { FaFacebookF, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebookF, FaShippingFast, FaWhatsapp } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { HiOutlineEnvelope } from 'react-icons/hi2';
 import { IoShareSocial } from 'react-icons/io5';
+import { LiaShoppingCartSolid } from 'react-icons/lia';
+import { TfiEmail } from 'react-icons/tfi';
+import { TiArrowShuffle } from 'react-icons/ti';
+import { IoMdHeartEmpty } from 'react-icons/io';
+import FullDes from '../Components/more details/FullDes';
+import Cards from '../Components/Cards';
 
 const Details = () => {
     const [selectedSize, setSelectedSize] = useState("Small");
@@ -68,7 +74,8 @@ const Details = () => {
 
                         {/* Description */}
                         <div>
-                            <p className='mb-2'>Ethical presents a great utility product for your kitchen...</p>
+                            <p className='mb-2 text-sm'>
+                                Ethical presents a great utility product for your kitchen. It has a neat and simple, classic design, which looks great in any modern kitchen. Easy to use and clean, this product will make your cooking experience much more pleasurable. Made from high-quality Stainless Steel.</p>
 
                             {/* Rating */}
                             <div className="rating rating-xs mb-2">
@@ -80,8 +87,8 @@ const Details = () => {
                             </div>
 
                             {/* SKU / Vendor */}
-                            <h1 className='mb-1'>SKU: <span>Neoflam125</span></h1>
-                            <h1 className='mb-2'>Vendor: <span>COMPUTERS PTY LTD</span></h1>
+                            <h1 className='mb-1'>SKU: <span className='ml-36 text-gray-400'>Neoflam125</span></h1>
+                            <h1 className='mb-2'>Vendor: <span className='ml-[123px] text-yellow-400 border-b-2 border-yellow-400'>COMPUTERS PTY LTD</span></h1>
 
                             {/* Color */}
                             <h1>Color</h1>
@@ -123,11 +130,101 @@ const Details = () => {
                             </div>
 
                         </div>
+                        {/* purchase cart */}
+                        <div className='border border-gray-300 h-fit shadow-lg'>
+                            <h1 className='my-3 text-center'>Availability: <span className='text-yellow-400'>In stock</span></h1>
+                            <hr className='w-full  border-gray-300  mb-3' />
+                            <div className='space-y-4'>
+                                <h1 className='text-2xl text-center text-purple-500'>$500.00 incl tax</h1>
+                                <div className='flex gap-2 justify-center'>
+                                    <div className='bg-gray-200 flex gap-x-1 p-1 rounded-sm'>
+                                        <h1 className='bg-white flex items-center py-0 px-5 rounded-sm'>1</h1>
+                                        <div className='flex flex-col gap-1'>
+                                            <button className='bg-white h-[15px] w-[15px] flex justify-center items-center'>+</button>
+                                            <button className='bg-white h-[15px] w-[15px] flex justify-center items-center'>-</button>
+                                        </div>
+                                    </div>
 
-                        <div>{/* Empty column or additional content */}</div>
+                                    <button className='px-6 py-2 flex items-center gap-x-2 bg-yellow-500 text-white rounded-sm'><LiaShoppingCartSolid className='text-3xl'></LiaShoppingCartSolid> Add to cart</button>
+                                    <button className='px-6 py-2 bg-purple-500 text-white rounded-sm'><NavLink  to='/checkout'>Buy Now</NavLink></button>
+                                </div>
+
+                                <div className='flex justify-center gap-x-2'>
+                                    <button className='flex gap-x-1 items-center bg-gray-200 border-2 rounded-sm text-sm border-gray-300 py-2 px-5 ' ><IoMdHeartEmpty className='text-xl'></IoMdHeartEmpty> Wishlist</button>
+                                    <button className='flex gap-x-1 items-center bg-gray-200 border-2 rounded-sm text-sm border-gray-300 py-2 px-5 ' ><TiArrowShuffle className='text-xl'></TiArrowShuffle> Compare</button>
+                                    <button className='flex gap-x-1 items-center bg-gray-200 border-2 rounded-sm text-sm border-gray-300 py-2 px-5 ' ><TfiEmail className='text-xl' /> <NavLink to='/email'>Email a friend</NavLink> </button>
+
+                                </div>
+                                <hr className='w-full  border-gray-300' />
+                                <h1 className='gap-x-1 pb-3 mt-0 pt-0 flex items-center justify-center'> <FaShippingFast className='text-xl' />Free shipping</h1>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            {/* more details */}
+
+            <div className='border border-gray-300 h-fit'>
+
+                <ul className="flex gap-x-7">
+                    <li>
+                        <NavLink
+                            to="full-des"
+                            className={({ isActive }) => isActive ? "text-purple-600" : "text-black"}
+                        >
+                            Full Description
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="spec"
+                            className={({ isActive }) => isActive ? "text-purple-600" : "text-black"}
+                        >
+                            Specification
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="tags"
+                            className={({ isActive }) => isActive ? "text-purple-600" : "text-black"}
+                        >
+                            Tags
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="reviews"
+                            className={({ isActive }) => isActive ? "text-purple-600" : "text-black"}
+                        >
+                            Reviews
+                        </NavLink>
+                    </li>
+                </ul>
+
+
+                <hr className='w-full  border-gray-300  mb-3' />
+
+                <div className='px-5'>
+                    <Outlet></Outlet>
+
+                </div>
+
+
+
+            </div>
+
+            {/* Customers who bought this item also bought */}
+            <div>
+                <h1 className='text-2xl'>Customers who bought this item also bought</h1>
+                <div className="flex gap-5">
+                    {[1, 2, 3, 4].map((item, index) => (
+                        <Cards key={index} />
+                    ))}
+                </div>
+            </div>
+
+
         </div>
     );
 };
